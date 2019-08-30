@@ -5,7 +5,7 @@ import TaskList from './TaskList';
 class Main extends Component {
     render() {
         return (
-            <MDBCol role="main" md="8" lg="9" className="ms-sm-auto p-4">
+            <MDBCol id="main" role="main" md="8" lg="9" className="ms-sm-auto p-4">
                 <MDBRow className="d-flex flex-column">
                     <MDBCol>
                         <MDBRow className="d-flex flex-row justify-content-between">

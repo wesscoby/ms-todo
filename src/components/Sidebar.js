@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { MDBCol, MDBNav, MDBIcon } from 'mdbreact';
+import { NavLink } from 'react-router-dom';
 import MenuItem from './MenuItem';
 import MenuItems from '../data/menu-items.json';
 
@@ -14,13 +15,18 @@ class Sidebar extends Component {
           <MDBCol md="3" className="d-none d-md-block sidebar p-3">
             <Fragment className="sidebar-sticky">
               <MDBNav className="flex-column">
-                <a class="navbar-brand col-sm-3 col-md-2 mr-0 mb-3" href="#"><MDBIcon icon="bars" /></a>
+                <NavLink to='/' 
+                  class="navbar-brand col-sm-3 col-md-2 mr-0 mb-3 hamburger text-blue" 
+                >
+                  <MDBIcon icon="bars" size="1x"/>
+                </NavLink>
                 {this.state.items.map(
-                  ({id, name, count, icon, active}) => 
-                    <MenuItem 
+                  ({id, name, count, icon, active, color}) => 
+                    <MenuItem className="mb-2"
                       key={id} 
                       name={name}
                       icon={icon}
+                      iconColor={color}
                       count={(count > 0) ? count : ''}
                       active={(active) ? 'active' : ''}
                     />

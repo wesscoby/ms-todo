@@ -37,7 +37,11 @@ body {
   height: 100vh;
   background: #eae7e1;
   font-family: 'Segoe UI Regular', sans-serif;
-  /* font-weight: 500 */
+}
+
+.sidebar .hamburger {
+  font-weight: 100;
+  font-family: "Segoe UI Italic";
 }
 
 .sidebar {
@@ -46,9 +50,21 @@ body {
   overflow: auto;
 }
 
-.active {
+.sidebar li a {
+  color: #708293;
+}
+
+#main h4 {
   font-weight: bold;
+}
+
+.active {
   background: #dbd7cf;
+}
+
+.active a {
+  color: #000;
+  font-weight: bold;
 }
 
 #elipsis {
@@ -69,4 +85,8 @@ body {
   width: 95%;
   height: 47px;
   border-bottom: 1px solid #e4e0da;
+  }
+
+  .normal {
+    color: #708293;
   }

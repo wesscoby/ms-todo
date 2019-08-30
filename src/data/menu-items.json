@@ -4,83 +4,95 @@
             "id": 1,
             "name": "My Day",
             "icon": "cloud-sun",
+            "color": "normal",
             "count": 0,
             "active": true
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Important",
             "icon": "star",
+            "color": "normal",
             "count": 29,
             "active": false
         },
         {
-            "id": 1,
+            "id": 3,
             "name": "Planned",
             "icon": "calendar-alt",
+            "color": "normal",
             "count": 2,
             "active": false
         },
         {
-            "id": 1,
+            "id": 4,
             "name": "Flagged Email",
             "icon": "flag",
+            "color": "red-text",
             "count": 3,
             "active": false
         },
         {
-            "id": 1,
+            "id": 5,
             "name": "Tasks",
             "icon": "home",
+            "color": "blue-text",
             "count": 16,
             "active": false
         },
         {
-            "id": 1,
+            "id": 6,
             "name": "Daily Routine",
             "icon": "list",
+            "color": "blue-text",
             "count": 28,
             "active": false
         },
         {
-            "id": 1,
+            "id": 7,
             "name": "Family",
             "icon": "users",
+            "color": "normal",
             "count": 2,
             "active": false
         },
         {
-            "id": 1,
+            "id": 8,
             "name": "Learn",
             "icon": "list",
-            "count": 14,
+            "color": "green-text",
+            "count": 44,
             "active": false
         },
         {
-            "id": 1,
+            "id": 9,
             "name": "Chores",
             "icon": "list",
+            "color": "red-text",
             "count": 6,
             "active": false
         },
         {
-            "id": 1,
+            "id": 10,
             "name": "Wealth",
             "icon": "money-bill-alt",
+            "color": "normal",
             "count": 2,
             "active": false
         },
         {
-            "id": 1,
+            "id": 11,
             "name": "Spirit",
             "icon": "fire-alt",
+            "color": "normal",
             "count": 27,
             "active": false
         },
         {
-            "id": 1,
+            "id": 12,
             "name": "Health",
             "icon": "hospital",
+            "color": "normal",
             "count": 1,
             "active": false
         }
