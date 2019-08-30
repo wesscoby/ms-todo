@@ -1,4 +1,45 @@
+/* Segoe UI Font-face Kit */
+@font-face {
+  font-family: 'Segoe UI Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Segoe UI Regular'), url('fonts/segoe-ui.woff') format('woff');
+  }
+  
+  
+  @font-face {
+  font-family: 'Segoe UI Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Segoe UI Italic'), url('fonts/segoe-ui-italic.woff') format('woff');
+  }
+  
+  
+  @font-face {
+  font-family: 'Segoe UI Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Segoe UI Bold'), url('fonts/segoe-ui-bold.woff') format('woff');
+  }
+  
+  
+  @font-face {
+  font-family: 'Segoe UI Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Segoe UI Bold Italic'), url('fonts/segoe-ui-bold-italic.woff') format('woff');
+  }
+
+
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: #eae7e1;
+  font-family: 'Segoe UI Regular', sans-serif;
+  /* font-weight: 500 */
+}
+
+.sidebar {
+  background: #e1ddd6;
 }

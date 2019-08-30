@@ -1,13 +1,18 @@
-import React, { Component, Fragment } from 'react';
-import { MDBIcon } from 'mdbreact';
+import React, { Component } from 'react';
+import { MDBContainer, MDBRow } from 'mdbreact';
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
 
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <MDBIcon icon="globe" /> Hello World
-      </Fragment>
+      <MDBContainer className="" fluid="true">
+        <MDBRow>
+          <Sidebar />
+          <Main />
+        </MDBRow>
+      </MDBContainer>
     )
   }
 }
