@@ -8,7 +8,9 @@ Build the page above in React. It does not need to have any functionality just y
 ![Test Preview](./test-done-preview.png)
 
 #### NB
-Tools and Packages used:
--   React (`create-react-app, react-router-dom`)
--   [Material Design Bootstrap](https://mdbootstrap.com/) (`mdbreact`)
+-   Had to replace unavailable icons with similar ones.
+
+-   Tools and Packages used:
+    -   React (`create-react-app, react-router-dom`)
+    -   [Material Design Bootstrap](https://mdbootstrap.com/) (`mdbreact`)
 
