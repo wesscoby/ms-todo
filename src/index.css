@@ -88,7 +88,8 @@ body {
 }
 
 .line{
-  width: 95%;
+  width: 97%;
   height: 47px;
-  border-bottom: 1px solid #dad4cb;
-  }
+  border-bottom: 1px solid #dad4cb; 
+  margin: 0 auto;
+}
