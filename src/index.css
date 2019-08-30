@@ -42,4 +42,31 @@ body {
 
 .sidebar {
   background: #e1ddd6;
+  height: 100vh;
+  overflow: auto;
 }
+
+.active {
+  font-weight: bold;
+  background: #dbd7cf;
+}
+
+#elipsis {
+  font-weight: 100 !important;
+  color: #797d7e;
+  font-family: "Segoe UI Italic";
+  position: relative;
+  top: -3px;
+}
+
+#date {
+  position: relative;
+  top: -8px;
+  font-size: 14px;
+}
+
+.line{
+  width: 95%;
+  height: 47px;
+  border-bottom: 1px solid #e4e0da;
+  }

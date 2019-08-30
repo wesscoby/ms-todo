@@ -1,0 +1,88 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "My Day",
+            "icon": "cloud-sun",
+            "count": 0,
+            "active": true
+        },
+        {
+            "id": 1,
+            "name": "Important",
+            "icon": "star",
+            "count": 29,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Planned",
+            "icon": "calendar-alt",
+            "count": 2,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Flagged Email",
+            "icon": "flag",
+            "count": 3,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Tasks",
+            "icon": "home",
+            "count": 16,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Daily Routine",
+            "icon": "list",
+            "count": 28,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Family",
+            "icon": "users",
+            "count": 2,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Learn",
+            "icon": "list",
+            "count": 14,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Chores",
+            "icon": "list",
+            "count": 6,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Wealth",
+            "icon": "money-bill-alt",
+            "count": 2,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Spirit",
+            "icon": "fire-alt",
+            "count": 27,
+            "active": false
+        },
+        {
+            "id": 1,
+            "name": "Health",
+            "icon": "hospital",
+            "count": 1,
+            "active": false
+        }
+    ]
+}
