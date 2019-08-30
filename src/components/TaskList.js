@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { MDBRow, MDBCol } from 'mdbreact';
 
-
+// Unfinished component
+// Only display lines
 class TaskList extends Component {
     render() {
         return (

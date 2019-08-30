@@ -20,6 +20,9 @@ class Sidebar extends Component {
                 >
                   <MDBIcon icon="bars" size="1x"/>
                 </NavLink>
+                {/* List of  menu items:
+                    Pass each object in state.items as prop to MenuItem component 
+                */}
                 {this.state.items.map(
                   ({id, name, count, icon, active, color}) => 
                     <MenuItem className="mb-2"

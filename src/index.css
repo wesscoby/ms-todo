@@ -30,7 +30,7 @@
   src: local('Segoe UI Bold Italic'), url('fonts/segoe-ui-bold-italic.woff') format('woff');
   }
 
-
+/* Body */
 body {
   margin: 0;
   width: 100vw;
@@ -39,6 +39,7 @@ body {
   font-family: 'Segoe UI Regular', sans-serif;
 }
 
+/* SideBar Component Styles */
 .sidebar .hamburger {
   font-weight: 100;
   font-family: "Segoe UI Italic";
@@ -51,11 +52,7 @@ body {
 }
 
 .sidebar li a {
-  color: #708293;
-}
-
-#main h4 {
-  font-weight: bold;
+  color: #797d7e;
 }
 
 .active {
@@ -63,7 +60,16 @@ body {
 }
 
 .active a {
-  color: #000;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.normal {
+  color: #797d7e;
+}
+
+/* Main Component Styles */
+#main h4 {
   font-weight: bold;
 }
 
@@ -85,8 +91,4 @@ body {
   width: 95%;
   height: 47px;
   border-bottom: 1px solid #e4e0da;
-  }
-
-  .normal {
-    color: #708293;
   }
