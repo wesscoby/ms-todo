@@ -45,27 +45,47 @@ body {
   font-family: "Segoe UI Italic";
 }
 
+.sidebar button {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #797d7e;
+  /* cursor: pointer; */
+}
+
+.sidebar button:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .sidebar {
   background: #e1ddd6;
   height: 100vh;
   overflow: auto;
 }
 
-.sidebar li a {
-  color: #797d7e;
-}
-
 .active {
   background: #dbd7cf;
 }
 
-.active a {
+.active button {
   color: #000 !important;
   font-weight: bold;
 }
 
 .normal {
   color: #797d7e;
+}
+
+.new-list {
+  position: absolute;
+  width: 95%;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.new-list button {
+  color: blue !important
 }
 
 /* Main Component Styles */

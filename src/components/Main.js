@@ -11,7 +11,7 @@ class Main extends Component {
                         <MDBRow className="d-flex flex-row justify-content-between">
                             <MDBCol className="d-flex flex-column mb-2">
                                 <h4>
-                                    My Day
+                                    {this.props.activeList.name}
                                     <span id="elipsis" className="mx-3">...</span>
                                 </h4>
                                 <p id="date">Thursday, August 29</p>
