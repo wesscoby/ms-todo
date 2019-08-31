@@ -11,7 +11,7 @@ class Sidebar extends Component {
       return (
           <MDBCol md="3" className="d-none d-md-block sidebar p-3">
             <div className="sidebar-sticky">
-              <MDBNav className="flex-column">
+              <MDBNav className="d-flex flex-column list">
                 <NavLink to='/' 
                   className="navbar-brand col-sm-3 col-md-2 mr-0 mb-3 hamburger text-blue" 
                 >
@@ -22,7 +22,7 @@ class Sidebar extends Component {
                 */}
                 {this.props.menuItems.map(
                   ({id, name, count, icon, active, color}) => 
-                    <MenuItem className="mb-2"
+                    <MenuItem className=""
                       key={id} 
                       name={name}
                       icon={icon}
@@ -34,6 +34,10 @@ class Sidebar extends Component {
                 )}
               </MDBNav>
             </div>
+              <div className="new-list d-flex flex-row justify-content-between">
+                <button className="btn btn-link p-2"><MDBIcon icon="plus" className="blue-text" /> New List</button>
+                <button className="btn btn-link p-2"><MDBIcon far icon="object-group" className="blue-text"/></button>
+              </div>
           </MDBCol>
       )
   }

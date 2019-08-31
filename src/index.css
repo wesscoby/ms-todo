@@ -77,6 +77,17 @@ body {
   color: #797d7e;
 }
 
+.new-list {
+  position: absolute;
+  width: 95%;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.new-list button {
+  color: blue !important
+}
+
 /* Main Component Styles */
 #main h4 {
   font-weight: bold;
