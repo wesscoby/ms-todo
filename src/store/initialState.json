@@ -1,0 +1,55 @@
+{
+    "lists": [
+        {
+            "id": "1",
+            "name": "My Day",
+            "icon": "cloud-sun",
+            "color": "normal"
+        },
+        {
+            "id": "2",
+            "name": "Important",
+            "icon": "star",
+            "color": "normal"
+        },
+        {
+            "id": "3",
+            "name": "Planned",
+            "icon": "calendar-alt",
+            "color": "normal"
+        },
+        {
+            "id": "4",
+            "name": "Flagged Email",
+            "icon": "flag",
+            "color": "red-text"
+        },
+        {
+            "id": "5",
+            "name": "Tasks",
+            "icon": "home",
+            "color": "blue-text"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "1",
+            "listId": "1",
+            "title": "Go to Software Design Meetup",
+            "completed": false
+        },
+        {
+            "id": "2",
+            "listId": "1",
+            "title": "Properly setup this redux project",
+            "completed": false
+        },
+        {
+            "id": "1",
+            "listId": "2",
+            "title": "Finish Learning Redux",
+            "completed": false
+        }
+    ],
+    "activeList": "1"
+}
