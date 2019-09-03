@@ -4,14 +4,19 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './index.css';
-import App from './App';
+import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+// import { BrowserRouter as Router } from 'react-router-dom';
+
+window.store = store;
+console.log(store.getState())
 
 render(
-    <Router>
+    <Provider store={store}>
         <App />
-    </Router>, 
+    </Provider>, 
     document.getElementById('root')
 );
 
