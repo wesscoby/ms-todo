@@ -1,8 +1,11 @@
 import React from 'react';
 import { MDBRow, MDBCol, MDBIcon } from 'mdbreact';
-import TaskList from './TaskList';
+import TaskList from '../containers/TaskList';
 
 const Main = ({ lists, activeList }) => {
+
+    const { name, icon, color } = lists.find(list => list.id === activeList);
+
     return (
         <MDBCol id="main" role="main" md="8" lg="9" className="ms-sm-auto p-4">
             <MDBRow className="d-flex flex-column">
@@ -10,7 +13,7 @@ const Main = ({ lists, activeList }) => {
                     <MDBRow className="d-flex flex-row justify-content-between">
                         <MDBCol className="d-flex flex-column mb-2">
                             <h4>
-                                {lists.find(list => list.id === activeList).name}
+                            <MDBIcon icon={icon} className={`${(color === 'normal') ? 'black-text' : color} mr-2`}/>{name}
                                 <span id="elipsis" className="mx-3">...</span>
                             </h4>
                             <p id="date">Thursday, August 29</p>
@@ -24,7 +27,7 @@ const Main = ({ lists, activeList }) => {
                 <MDBCol className="mb-3">
                 <MDBIcon icon="plus" /> Add Task
                 </MDBCol>
-                <TaskList />
+                <TaskList  />
             </MDBRow>
         </MDBCol>
     )

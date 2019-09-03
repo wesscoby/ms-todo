@@ -1,4 +1,4 @@
-import Main from '../ui/Main';
+import TaskList from '../ui/TaskList';
 import { connect } from 'react-redux';
 import actions from '../../store/actions';
 
@@ -24,4 +24,4 @@ const mapDispatchToProps = dispatch =>
     }
   })  
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main)  
+export default connect(mapStateToProps, mapDispatchToProps)(TaskList)  

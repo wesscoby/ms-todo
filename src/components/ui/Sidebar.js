@@ -3,7 +3,7 @@ import { MDBCol, MDBNav, MDBIcon } from 'mdbreact';
 import MenuItem from '../ui/MenuItem';
 
 
-const Sidebar = ({ lists, activeList, addList, removeList, changeActive }) => (
+const Sidebar = ({ lists, tasks, activeList, addList, removeList, changeActive }) => (
     <MDBCol md="3" className="d-none d-md-block sidebar p-3">
       <div className="sidebar-sticky">
         <MDBNav className="d-flex flex-column list">
@@ -16,6 +16,8 @@ const Sidebar = ({ lists, activeList, addList, removeList, changeActive }) => (
               {...list}
               activeList={(list.id === activeList) ? 'active' : ''}
               changeActive={changeActive}
+              removeList={removeList}
+              tasks={tasks}
             />
           ))}
         </MDBNav>

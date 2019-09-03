@@ -104,7 +104,8 @@ body {
 #date {
   position: relative;
   top: -8px;
-  font-size: 14px;
+  left: 8px;
+  font-size: 15px;
 }
 
 .line{
