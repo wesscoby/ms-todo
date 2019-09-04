@@ -76,8 +76,8 @@
     "tasks": [
         {
             "id": "1",
-            "listId": "8",
-            "title": "Finish Learning Redux",
+            "listId": "3",
+            "title": "Integrate Redux with assessment project",
             "completed": false
         },
         {
@@ -88,8 +88,8 @@
         },
         {
             "id": "3",
-            "listId": "1",
-            "title": "Network with at least 3 people",
+            "listId": "8",
+            "title": "Finish the reading on Redux",
             "completed": false
         },
         {
@@ -100,8 +100,20 @@
         },
         {
             "id": "5",
-            "listId": "2",
-            "title": "Secure the job",
+            "listId": "3",
+            "title": "Add form fields for adding and updating tasks and lists",
+            "completed": false
+        },
+        {
+            "id": "6",
+            "listId": "3",
+            "title": "Use a package to generate random IDs for lists and tasks",
+            "completed": false
+        },
+        {
+            "id": "7",
+            "listId": "3",
+            "title": "Autosuggest list names from Lists when creating Tasks",
             "completed": false
         }
     ],
