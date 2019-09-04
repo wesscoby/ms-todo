@@ -29,25 +29,91 @@
             "name": "Tasks",
             "icon": "home",
             "color": "blue-text"
+        },
+        {
+            "id": "6",
+            "name": "Daily Routine",
+            "icon": "list",
+            "color": "blue-text"
+        },
+        {
+            "id": "7",
+            "name": "Family",
+            "icon": "users",
+            "color": "normal"
+        },
+        {
+            "id": "8",
+            "name": "Learn",
+            "icon": "list",
+            "color": "green-text"
+        },
+        {
+            "id": "9",
+            "name": "Chores",
+            "icon": "list",
+            "color": "red-text"
+        },
+        {
+            "id": "10",
+            "name": "Wealth",
+            "icon": "money-bill-alt",
+            "color": "normal"
+        },
+        {
+            "id": "11",
+            "name": "Spirit",
+            "icon": "fire-alt",
+            "color": "red-text"
+        },
+        {
+            "id": "12",
+            "name": "Health",
+            "icon": "hospital",
+            "color": "normal"
         }
     ],
     "tasks": [
         {
             "id": "1",
-            "listId": "1",
-            "title": "Go to Software Design Meetup",
+            "listId": "3",
+            "title": "Integrate Redux with assessment project",
             "completed": false
         },
         {
             "id": "2",
             "listId": "1",
-            "title": "Properly setup this redux project",
+            "title": "Go to Software Design Meetup",
             "completed": false
         },
         {
             "id": "3",
-            "listId": "2",
-            "title": "Finish Learning Redux",
+            "listId": "8",
+            "title": "Finish the reading on Redux",
+            "completed": false
+        },
+        {
+            "id": "4",
+            "listId": "8",
+            "title": "Learn React Hooks & Context",
+            "completed": false
+        },
+        {
+            "id": "5",
+            "listId": "3",
+            "title": "Add form fields for adding and updating tasks and lists",
+            "completed": false
+        },
+        {
+            "id": "6",
+            "listId": "3",
+            "title": "Use a package to generate random IDs for lists and tasks",
+            "completed": false
+        },
+        {
+            "id": "7",
+            "listId": "3",
+            "title": "Autosuggest list names from Lists when creating Tasks",
             "completed": false
         }
     ],
