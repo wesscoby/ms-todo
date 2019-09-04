@@ -3,12 +3,12 @@ import C from '../constants';
 const { CHANGE_ACTIVE } = C;
 
 
-const activeList = (state = "", { type, payload }) => {
+const activeList = (activeList = "", { type, payload }) => {
     switch(type) {
         case CHANGE_ACTIVE:
             return payload;
         default:
-            return state;
+            return activeList;
     }
 }
 

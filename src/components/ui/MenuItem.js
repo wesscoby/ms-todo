@@ -21,7 +21,11 @@ const MenuItem = ({ tasks, icon, id, color, name, activeList, changeActive, remo
                 <MDBIcon icon={icon} className={`${color} mr-2`}/>{name}
             </button>
             <Fragment>
-                {tasks.filter(task => task.id === id).length}
+                {
+                    (id !== "5") ?
+                    tasks.filter(task => task.listId === id).length :
+                    tasks.length
+                }
             </Fragment>
         </MDBNavItem>
     )
