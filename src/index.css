@@ -40,9 +40,50 @@ body {
 }
 
 /* SideBar Component Styles */
+.sidebar {
+  background: #e1ddd6;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .sidebar .hamburger {
+  height: 10vh;
+}
+
+.sidebar .hamburger button {
   font-weight: 100;
   font-family: "Segoe UI Italic";
+}
+
+.sidebar .sidebar-list {
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+}
+
+#sidebar-list::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 20px;
+  background-color: #eae7e1;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar-list::-webkit-scrollbar-thumb {
+  background-color: #797d7e;
+  border-radius: 20px;
+}
+
+#sidebar-list::-webkit-scrollbar-track {
+  -webkit-box-shdow: inset 0 0 0 6px rgba(0,0,0,0.3);
+  background: #eae7e1;
+  border-radius: 20px;
+}
+
+.sidebar p {
+  margin: auto 0;
 }
 
 .sidebar button {
@@ -50,18 +91,12 @@ body {
   text-transform: capitalize;
   font-size: 15px;
   color: #797d7e;
-  /* cursor: pointer; */
 }
 
 .sidebar button:hover {
   font-weight: bold;
   text-decoration: none;
-}
-
-.sidebar {
-  background: #e1ddd6;
-  height: 100vh;
-  overflow: auto;
+  font-size: 16px;
 }
 
 .active {
@@ -79,7 +114,8 @@ body {
 
 .new-list {
   position: absolute;
-  width: 95%;
+  height: 10vh;
+  width: 100%;
   bottom: 0;
   margin-bottom: 0;
 }
