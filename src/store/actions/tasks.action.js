@@ -2,14 +2,14 @@ import C from '../constants';
 
 const { ADD_TASK, UPDATE_TASK, REMOVE_TASK } = C;
 
-export const addTask = (id, listId, title, completed) => ({
+export const addTask = ({ id, listId, title, completed = false}) => ({
     type: ADD_TASK,
     payload: {
         id, listId, title, completed
     }
 });
 
-export const updateTask = (id, listId, title, completed) => ({
+export const updateTask = ({ id, listId = "", title = "", completed = false }) => ({
     type: UPDATE_TASK,
     payload: {
         id, listId, title, completed

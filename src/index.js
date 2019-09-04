@@ -8,9 +8,11 @@ import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
+import actions from './store/actions';
 // import { BrowserRouter as Router } from 'react-router-dom';
 
 window.store = store;
+window.actions = actions
 console.log(store.getState())
 
 render(
