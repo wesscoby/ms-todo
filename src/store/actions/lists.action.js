@@ -9,7 +9,7 @@ export const addList = ({ id, name, icon, color = "normal" }) => ({
     }
 });
 
-export const updateList = ({ id, name, icon = "", color = "" }) => ({
+export const updateList = ({ id, name = "", icon = "", color = "" }) => ({
     type: UPDATE_LIST,
     payload: {
         id, name, icon, color

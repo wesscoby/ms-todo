@@ -10,9 +10,14 @@ const MenuItem = ({ tasks, icon, id, color, name, activeList, changeActive, remo
     }
 
     const remove = event => {
+        const readOnlyLists = ["1", "2", "3", "4", "5"];
         const { value } = event.target;
-        changeActive("1");
-        removeList(value);
+        if (readOnlyLists.includes(value)) {
+            alert("This List is ReadOnly!");
+        } else {
+            changeActive("1");
+            removeList(value);
+        }
     }
 
     return (
