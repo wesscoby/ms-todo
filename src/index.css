@@ -150,3 +150,11 @@ body {
   border-bottom: 1px solid #dad4cb; 
   margin: 0 auto;
 }
+
+.form-input {
+  height: 25px;
+}
+
+.add-task {
+  cursor: pointer;
+}
