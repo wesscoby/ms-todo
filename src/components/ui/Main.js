@@ -38,7 +38,11 @@ class Main extends React.Component {
                         {
                             (this.state.isClicked) ?
                                 (<p className="add-task" onClick={this.handleToggle}><MDBIcon icon="plus" /> Add Task</p>) :
-                                (<FormInput taskFn={this.props.addTask} handleToggle={this.handleToggle} />)
+                                (<FormInput 
+                                    taskFn={this.props.addTask} 
+                                    listId={this.props.activeList} 
+                                    handleToggle={this.handleToggle} 
+                                />)
                         }
                     </MDBCol>
                     <TaskList  />
