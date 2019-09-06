@@ -11,16 +11,22 @@ const TaskList = ({ lists, tasks, activeList, addTask, updateTask, removeTask })
             <MDBRow className="d-flex flex-column">
                 {
                     (activeList !== "5") ?
-                    activeTasks.map(task => (
-                        <Task 
-                            key={task.id}
-                            title={task.title}
-                        />
-                    )) :
+                        activeTasks.map(task => (
+                            <Task 
+                                key={task.id}
+                                {...task}
+                                addTask={addTask}
+                                updateTask={updateTask}
+                                removeTask={removeTask}
+                            />
+                        )) :
                     tasks.map(task => (
                         <Task 
                             key={task.id}
-                            title={task.title}
+                            {...task}
+                            addTask={addTask}
+                            updatetask={updateTask}
+                            removeTask={removeTask}
                         />
                     ))
                 }
