@@ -78,19 +78,19 @@
             "id": "1",
             "listId": "3",
             "title": "Integrate Redux with assessment project",
-            "completed": false
+            "completed": true
         },
         {
             "id": "2",
             "listId": "1",
             "title": "Go to Software Design Meetup",
-            "completed": false
+            "completed": true
         },
         {
             "id": "3",
             "listId": "8",
-            "title": "Finish the reading on Redux",
-            "completed": false
+            "title": "Read or watch some tutorials on Redux",
+            "completed": true
         },
         {
             "id": "4",
