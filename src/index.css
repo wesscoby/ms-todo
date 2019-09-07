@@ -176,6 +176,6 @@ body {
   margin: 0 auto;
 }
 
-.add-task, .add-list {
+.add-task, .add-list, .task-status {
   cursor: pointer;
 }

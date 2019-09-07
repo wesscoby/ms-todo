@@ -9,8 +9,26 @@ class Main extends Component {
         taskFormToggle: false
     }
 
-    handleCallForUpdate = taskId => {
-        console.log(taskId)
+    // Toggle Task form 
+    handleToggle = () => {
+        this.setState({ taskFormToggle: !this.state.taskFormToggle });
+    }
+
+
+    // Update Task Details except taskId
+    handleCallForUpdate = ({ id, listId = "", title = "", completed = false }) => {
+        this.props.updateTask({ id, listId, title, completed })
+    }
+
+    // Update Task status [ completed at click of bullet icon ]
+    toggleTaskStatus = taskId => {
+        let { completed } = this.props.tasks.find(task => task.id === taskId);
+        this.props.updateTask({id: taskId, completed: !completed});
+    }
+
+    // Receive Data from form and add new task to store
+    addNewTask = ({id, title, listId, completed}) => {
+        this.props.addTask({id, title, listId, completed})
     }
 
     // Mapping handler for rendering tasks 
@@ -19,15 +37,13 @@ class Main extends Component {
             key={task.id}
             {...task}
             addTask={this.props.addTask}
-            updateTask={this.props.updateTask}
+            updateTaskStatus={this.toggleTaskStatus}
             removeTask={this.props.removeTask}
             callForUpdate={this.handleCallForUpdate}
         />
     )
 
-    handleToggle = () => {
-        this.setState({ taskFormToggle: !this.state.taskFormToggle });
-    }
+    
 
     render() {
         // Get properties from activeList
@@ -66,7 +82,7 @@ class Main extends Component {
                         {
                             (this.state.taskFormToggle) ?
                                 (<TaskForm 
-                                    taskFn={this.props.addTask} 
+                                    sendData={this.addNewTask} 
                                     listId={this.props.activeList} 
                                     handleToggle={this.handleToggle} 
                                 />) : 

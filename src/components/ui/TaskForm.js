@@ -4,17 +4,15 @@ import { MDBFormInline, MDBInput, MDBIcon, MDBBtnGroup, MDBBtn } from "mdbreact"
 class TaskForm extends Component {
 
     state = {
-        taskIdInput: '',
-        listIdInput: '',
-        titleInput: '',
-        statusInput: false
+        taskIdInput: this.props.taskId || '',
+        listIdInput: this.props.listId,
+        titleInput: this.props.taskTitle || '',
+        statusInput: this.props.taskCompleted || false
     }
 
     handleChange = event => {
         let { type, name, value } = event.target
-
         if(type === "checkbox") value = event.target.checked;
-
         this.setState({ [name]: value })
     }
 
@@ -22,17 +20,18 @@ class TaskForm extends Component {
         event.preventDefault();
         let { taskIdInput, listIdInput, titleInput, statusInput } = this.state;
 
-        // If handleChange is not called, use default value instead of value in state
+        // If handleChange is not called, use default values instead of value in state
         if(listIdInput === '') listIdInput = this.props.listId;
+        if(titleInput === '') titleInput = this.props.taskTitle;
 
-        this.props.taskFn({
+        this.props.sendData({
             id: taskIdInput, 
             listId: listIdInput, 
             title: titleInput, 
             completed: statusInput
         });
 
-        this.handleToggleClick()
+        this.handleToggleClick();
     }
 
     handleToggleClick = () => {
@@ -41,14 +40,15 @@ class TaskForm extends Component {
 
     render() {
         return (
-            <MDBFormInline className="d-flex flex-row justify-content-around">
+            <MDBFormInline className="d-flex flex-row justify-content-between">
 
                 <MDBInput 
                     className="w-100"
                     label="Task Title" 
-                    type="text" 
+                    type="text"
+                    value={this.state.titleInput}
                     name="titleInput" 
-                    onChange={this.handleChange}
+                    onInput={this.handleChange}
                 />
 
                 <MDBInput
@@ -56,7 +56,8 @@ class TaskForm extends Component {
                     label="ID"
                     type="text"
                     name="taskIdInput"
-                    onChange={this.handleChange}
+                    value={this.state.taskIdInput}
+                    onInput={this.handleChange}
                 />
 
                 <MDBInput
@@ -65,15 +66,15 @@ class TaskForm extends Component {
                     disabled
                     type="text" 
                     name="listIdInput"
-                    value={this.props.listId} 
-                    onChange={this.handleChange} 
+                    value={this.state.listIdInput} 
+                    onInput={this.handleChange} 
                 />
 
                 <MDBInput 
                     label="Done" 
                     className="w-25"
                     type="checkbox"
-                    checked={this.props.checked}
+                    checked={this.state.statusInput}
                     id="statusCheckbox"
                     name="statusInput"
                     onChange={this.handleChange}
@@ -85,7 +86,7 @@ class TaskForm extends Component {
                         type="submit"
                         onClick={this.handleSubmit}
                     >
-                        <MDBIcon size="2x" icon="plus" className="" />
+                        <MDBIcon size="1x" icon="plus" className="" />
                     </MDBBtn>
                     
                     <MDBBtn 
@@ -93,7 +94,7 @@ class TaskForm extends Component {
                         type="reset"
                         onClick={this.handleToggleClick}
                     >
-                        <MDBIcon size="2x" icon="times" className=""/>
+                        <MDBIcon size="1x" icon="times" className=""/>
                     </MDBBtn>
                 </MDBBtnGroup>
 

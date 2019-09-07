@@ -8,7 +8,10 @@ import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
+// import actions from './store/actions'
 
+// window.store = store;
+// window.actions = actions
 
 render(
     <Provider store={store}>

@@ -12,12 +12,12 @@ const mapStateToProps = ({ lists, tasks, activeList }) =>
 const mapDispatchToProps = dispatch => 
   ({
 
-    addTask: (id, listId, title, completed) => {
-      dispatch(addTask(id, listId, title, completed))
+    addTask: ({id, listId, title, completed}) => {
+      dispatch(addTask({ id, listId, title, completed }))
     },
 
-    updateTask: (id, listId, title, completed) => {
-      dispatch(updateTask(id, listId, title, completed))
+    updateTask: ({ id, listId = "", title = "", completed = false }) => {
+      dispatch(updateTask({ id, listId, title, completed }))
     },
     
     removeTask: id => {

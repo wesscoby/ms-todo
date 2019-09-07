@@ -11,7 +11,7 @@ const singleTask = (task = {}, { type, payload }) => {
                 ...task,
                 listId: (payload.listId !== "") ? payload.listId : task.listId,
                 title: (payload.title !== "") ? payload.title : task.title,
-                completed: (payload.completed) ? payload.completed : task.completed 
+                completed: payload.completed 
             };
         default:
             return { ...task };
