@@ -1,47 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MDBCol, MDBNav, MDBIcon } from 'mdbreact';
-import MenuItem from '../ui/MenuItem';
+import List from './List';
 
 
-const Sidebar = ({ lists, tasks, activeList, addList, removeList, changeActive }) => (
-    // Sidebar
-    <MDBCol md="3" className="d-none d-md-block sidebar">
+class Sidebar extends Component {
+    render() {
+        return (
+            // Sidebar
+            <MDBCol md="3" className="d-none d-md-block sidebar">
+                <div className="sidebar-sticky">
+                    
+                    <MDBNav className="d-flex flex-column">
+                        
+                        {/* Hamburger Button [ not really a button 😉] */}
+                        <div className="hamburger">
+                            <p className="navbar-brand col-sm-3 col-md-2 mx-2 my-4">
+                                <MDBIcon icon="bars" size="1x" className="blue-text" />
+                            </p>
+                        </div>
 
-        <div className="sidebar-sticky">
-            <MDBNav className="d-flex flex-column">
-            
-                {/* Hamburger Button */}
-                <div className="hamburger">
-                    <button 
-                        className="navbar-brand col-sm-3 col-md-2 mx-2 my-4"
-                    >
-                        <MDBIcon icon="bars" size="1x" className="text-blue" />
-                    </button>
+                        {/* List Section */}
+                        <div id="sidebar-list" className="sidebar-list">
+                            {this.props.lists.map(list => (
+                                <List 
+                                    key={list.id} 
+                                    {...list}
+                                    activeList={(list.id === this.props.activeList) ? 'active' : ''}
+                                    changeActive={this.props.changeActive}
+                                    removeList={this.props.removeList}
+                                    updateList={this.props.updateList}
+                                    tasks={this.props.tasks}
+                                />
+                            ))}
+                        </div>
+                    
+                    </MDBNav>
                 </div>
 
-                {/* Sidebar List Section */}
-                <div id="sidebar-list" className="sidebar-list">
-                    {lists.map(list => (
-                    <MenuItem 
-                        key={list.id} 
-                        {...list}
-                        activeList={(list.id === activeList) ? 'active' : ''}
-                        changeActive={changeActive}
-                        removeList={removeList}
-                        tasks={tasks}
-                    />
-                    ))}
+                {/* Add or Update List Section */}
+                <div className="new-list d-flex flex-row justify-content-start">
+                    <p className="add-list blue-text mx-3"><MDBIcon icon="plus" className="blue-text" /> New List</p>
                 </div>
-            
-            </MDBNav>
-        </div>
 
-        {/* New List Section */}
-        <div className="new-list d-flex flex-row justify-content-start">
-            <button className="btn btn-link"><MDBIcon icon="plus" className="blue-text" /> New List</button>
-        </div>
-
-    </MDBCol> // Sidebar End
-)
+            </MDBCol> // Sidebar End
+        )
+    }
+}
 
 export default Sidebar;

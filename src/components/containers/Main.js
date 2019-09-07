@@ -4,21 +4,22 @@ import actions from '../../store/actions';
 
 const { addTask, removeTask, updateTask } = actions;
 
-const mapStateToProps = (state) => 
+const mapStateToProps = ({ lists, tasks, activeList }) => 
   ({
-    lists: state.lists,
-    tasks: state.tasks,
-    activeList: state.activeList
+    lists, tasks, activeList
   })
 
 const mapDispatchToProps = dispatch => 
   ({
+
     addTask: (id, listId, title, completed) => {
       dispatch(addTask(id, listId, title, completed))
     },
+
     updateTask: (id, listId, title, completed) => {
       dispatch(updateTask(id, listId, title, completed))
     },
+    
     removeTask: id => {
       dispatch(removeTask(id))
     }
