@@ -76,44 +76,128 @@
     "tasks": [
         {
             "id": "1",
-            "listId": "3",
-            "title": "Integrate Redux with assessment project",
+            "listId": "2",
+            "title": "Complete UI Build with all elements in their respective places",
             "completed": true
         },
         {
             "id": "2",
+            "listId": "2",
+            "title": "Implement Redux. Add a store to the project",
+            "completed": true
+        },
+        {
+            "id": "3",
+            "listId": "2",
+            "title": "Add a new Task. Store all tasks in the Redux store",
+            "completed": true
+        },
+        {
+            "id": "4",
+            "listId": "2",
+            "title": "Edit a Task in the Redux store",
+            "completed": true
+        },
+        {
+            "id": "5",
+            "listId": "2",
+            "title": "Delete a Task from the Redux store",
+            "completed": true
+        },
+        {
+            "id": "6",
+            "listId": "2",
+            "title": "Obviously all Tasks should be visible in the UI as a list",
+            "completed": true
+        },
+        {
+            "id": "7",
             "listId": "1",
             "title": "Go to Software Design Meetup",
             "completed": true
         },
         {
-            "id": "3",
-            "listId": "8",
-            "title": "Read or watch some tutorials on Redux",
+            "id": "8",
+            "listId": "1",
+            "title": "Meet Alvin for final assessment",
             "completed": true
         },
         {
-            "id": "4",
+            "id": "9",
             "listId": "8",
-            "title": "Learn React Hooks & Context",
+            "title": "Learn React Hooks and Context",
             "completed": false
         },
         {
-            "id": "5",
+            "id": "10",
             "listId": "3",
-            "title": "Add form fields for adding and updating tasks and lists",
+            "title": "Click on a List in Sidebar to make it active",
+            "completed": true
+        },
+        {
+            "id": "11",
+            "listId": "3",
+            "title": "Display tasks in Main, related to selected List",
+            "completed": true
+        },
+        {
+            "id": "12",
+            "listId": "3",
+            "title": "Add a toggle icon to Task to indicate status of Task (and toggle when clicked)",
+            "completed": true
+        },
+        {
+            "id": "13",
+            "listId": "3",
+            "title": "Add a counter to Lists. Counter for 'Tasks' shows the total number of tasks in store",
+            "completed": true
+        },
+        {
+            "id": "14",
+            "listId": "3",
+            "title": "Add a toggle icon to Task to indicate status of Task (and toggle when clicked)",
+            "completed": true
+        },
+        {
+            "id": "15",
+            "listId": "3",
+            "title": "Double-click on a list to delete it from Store",
+            "completed": true
+        },
+        {
+            "id": "16",
+            "listId": "3",
+            "title": "Add a new List. Store all Lists in the store",
             "completed": false
         },
         {
-            "id": "6",
+            "id": "17",
             "listId": "3",
-            "title": "Use a package to generate random IDs for lists and tasks",
+            "title": "Edit a List in the Redux Store",
             "completed": false
         },
         {
-            "id": "7",
+            "id": "18",
             "listId": "3",
-            "title": "Autosuggest list names from Lists when creating Tasks",
+            "title": "Autogenerate id when adding new List or Task",
+            "completed": false
+        },
+        {
+            "id": "19",
+            "listId": "8",
+            "title": "Learn and get started with Firebase",
+            "completed": false
+        },
+        {
+            "id": "20",
+            "listId": "6",
+            "title": "Eat. Sleep. Code. Repeat 😉",
+            "completed": false
+        },
+        {
+            "id": "21",
+            "listId": "3",
+            "title": "Add filter based on task status [ completed || !completed ]",
             "completed": false
         }
     ],
