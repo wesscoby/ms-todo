@@ -10,6 +10,7 @@ class TaskForm extends Component {
         statusInput: this.props.taskCompleted || false
     }
 
+    // Collect form input. Update state
     handleChange = event => {
         let { type, name, value } = event.target
         if(type === "checkbox") value = event.target.checked;
@@ -24,6 +25,7 @@ class TaskForm extends Component {
         if(listIdInput === '') listIdInput = this.props.listId;
         if(titleInput === '') titleInput = this.props.taskTitle;
 
+        // send form data to parent Component
         this.props.sendData({
             id: taskIdInput, 
             listId: listIdInput, 
@@ -42,6 +44,7 @@ class TaskForm extends Component {
         return (
             <MDBFormInline className="d-flex flex-row justify-content-between">
 
+                {/* Title field */}
                 <MDBInput 
                     className="w-100"
                     label="Task Title" 
@@ -51,6 +54,7 @@ class TaskForm extends Component {
                     onInput={this.handleChange}
                 />
 
+                {/* ID field */}
                 <MDBInput
                     className="w-50"
                     label="ID"
@@ -60,6 +64,7 @@ class TaskForm extends Component {
                     onInput={this.handleChange}
                 />
 
+                {/* List ID field */}
                 <MDBInput
                     className="w-50" 
                     label="List ID"
@@ -70,6 +75,7 @@ class TaskForm extends Component {
                     onInput={this.handleChange} 
                 />
 
+                {/* Status checkbox */}
                 <MDBInput 
                     label="Done" 
                     className="w-25"
@@ -80,6 +86,7 @@ class TaskForm extends Component {
                     onChange={this.handleChange}
                 />
                 
+                {/* Submit and Cancel buttons */}
                 <MDBBtnGroup size="sm" className="">
                     <MDBBtn
                         color="outline-success"

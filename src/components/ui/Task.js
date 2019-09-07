@@ -17,11 +17,8 @@ class Task extends Component {
     // Icon to use if Task dependending on task status
     checkCompleted = completed => (completed) ? "check-circle" : "circle";
         
-    // Send id of task to be updated to 'Main'
+    // Send form data to 'Main' to handle Task update
     handleTaskUpdate = ({ id, listId, title, completed}) => {
-
-
-        // console.log({ id, listId, title, completed });
         this.props.callForUpdate({ id, listId, title, completed });
     }
 
@@ -96,62 +93,5 @@ class Task extends Component {
         )
     }
 }
-
-// const Task = ({ id, title, listId, completed, removeTask, updateTaskStatus, callForUpdate }) => {
-
-//     // Change Task icon to reflect task status
-//     const checkCompleted = completed => 
-//         (completed) ? 
-//             (<MDBIcon id={id} onClick={updateStatus} far icon="check-circle  mr-3"/>) : 
-//             (<MDBIcon id={id} onClick={updateStatus} far icon="circle mr-3" />);
-
-
-//     // Send id of task to be updated to 'Main'
-//     const handleTaskUpdate = event => {
-//         const { value } = event.target;
-//         callForUpdate(value);
-//     }
-    
-//     // Remove Task from store
-//     const handleTaskRemoval = event => {
-//         const { value } = event.target;
-//         removeTask(value);
-//     }
-
-//     // Toggle status of task (completed)
-//     const updateStatus = event => {
-//         const { id } = event.target;
-//         updateTaskStatus(id);
-//     }
-
-//     return (
-//         <MDBCol className="mb-3 lead d-flex flex-row justify-content-between line">
-//             <p className="task-status" >{ checkCompleted(completed) }{ title }</p>
-            
-//             {/* Task Buttons */}
-//             <MDBBtnGroup size="xs" className="mb-1">
-//                 <MDBBtn 
-//                     color="primary" 
-//                     className="px-3"
-//                     value={id}
-//                     onClick={handleTaskUpdate}
-//                 >
-//                     <MDBIcon far icon="edit" />
-//                 </MDBBtn>
-
-//                 <MDBBtn 
-//                     color="danger" 
-//                     className="px-3"
-//                     value={id}
-//                     onClick={handleTaskRemoval}
-//                 >
-//                     <MDBIcon far icon="trash-alt"/>
-//                 </MDBBtn>
-//             </MDBBtnGroup>
-
-//         </MDBCol>
-//     )
-// }
-
 
 export default Task;

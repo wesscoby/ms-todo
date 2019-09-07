@@ -13,12 +13,12 @@ const mapStateToProps = ({ lists, tasks, activeList }) => ({
 const mapDispatchToProps = dispatch => 
   ({
 
-    addList: (id, name, icon, color) => {
-      dispatch(addList(id, name, icon, color))
+    addList: ({ id, name, icon, color }) => {
+      dispatch(addList({id, name, icon, color}))
     },
 
-    updateList: (id, name, icon, color) => {
-      dispatch(updateList(id, name, icon, color))
+    updateList: ({ id, name = "", icon = "", color = ""}) => {
+      dispatch(updateList({ id, name, icon, color }))
     },
 
     removeList: id => {
