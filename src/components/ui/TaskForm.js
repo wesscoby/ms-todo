@@ -42,29 +42,34 @@ class TaskForm extends Component {
 
     render() {
         return (
-            <MDBFormInline className="d-flex flex-row justify-content-between">
+            <MDBFormInline className="d-flex flex-row justify-content-between p-3">
 
                 {/* Title field */}
-                <MDBInput 
-                    className="w-100"
-                    label="Task Title" 
-                    type="text"
-                    value={this.state.titleInput}
-                    name="titleInput" 
-                    onInput={this.handleChange}
-                />
+                <div className="flex-grow-1 flex-fill mr-5">
+                    <MDBInput
+                        className="w-100"
+                        label="Task Title" 
+                        type="text"
+                        value={this.state.titleInput}
+                        name="titleInput" 
+                        onInput={this.handleChange}
+                    />
+                </div>
 
                 {/* ID field */}
-                <MDBInput
-                    className="w-50"
-                    label="ID"
-                    type="text"
-                    name="taskIdInput"
-                    value={this.state.taskIdInput}
-                    onInput={this.handleChange}
-                />
+                <div className="flex-shrink-1">
+                    <MDBInput
+                        className="w-50"
+                        label="ID"
+                        type="text"
+                        name="taskIdInput"
+                        value={this.state.taskIdInput}
+                        onInput={this.handleChange}
+                    />
+                </div>
 
                 {/* List ID field */}
+                <div className="flex-shrink-1">
                 <MDBInput
                     className="w-50" 
                     label="List ID"
@@ -74,36 +79,41 @@ class TaskForm extends Component {
                     value={this.state.listIdInput} 
                     onInput={this.handleChange} 
                 />
+                </div>
 
                 {/* Status checkbox */}
-                <MDBInput 
-                    label="Done" 
-                    className="w-25"
-                    type="checkbox"
-                    checked={this.state.statusInput}
-                    id="statusCheckbox"
-                    name="statusInput"
-                    onChange={this.handleChange}
-                />
+                <div className="flex-shrink-1 mr-5">
+                    <MDBInput 
+                        label="Done" 
+                        className="w-50"
+                        type="checkbox"
+                        checked={this.state.statusInput}
+                        id="statusCheckbox"
+                        name="statusInput"
+                        onChange={this.handleChange}
+                    />
+                </div>
                 
                 {/* Submit and Cancel buttons */}
-                <MDBBtnGroup size="sm" className="">
-                    <MDBBtn
-                        color="outline-success"
-                        type="submit"
-                        onClick={this.handleSubmit}
-                    >
-                        <MDBIcon size="1x" icon="plus" className="" />
-                    </MDBBtn>
-                    
-                    <MDBBtn 
-                        color="outline-danger"
-                        type="reset"
-                        onClick={this.handleToggleClick}
-                    >
-                        <MDBIcon size="1x" icon="times" className=""/>
-                    </MDBBtn>
-                </MDBBtnGroup>
+                <div className="flex-shrink-1">
+                    <MDBBtnGroup size="sm" className="w-50">
+                        <MDBBtn
+                            color="outline-success"
+                            type="submit"
+                            onClick={this.handleSubmit}
+                        >
+                            <MDBIcon size="1x" icon="plus" className="" />
+                        </MDBBtn>
+                        
+                        <MDBBtn 
+                            color="outline-danger"
+                            type="reset"
+                            onClick={this.handleToggleClick}
+                        >
+                            <MDBIcon size="1x" icon="times" className=""/>
+                        </MDBBtn>
+                    </MDBBtnGroup>
+                </div>
 
             </MDBFormInline>
         )
