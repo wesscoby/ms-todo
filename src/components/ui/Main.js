@@ -71,8 +71,14 @@ class Main extends Component {
                                 <p id="date">Thursday, August 29</p>
                             </MDBCol>
                             <MDBCol className="d-flex flex-row justify-content-end">
-                                <p className="mr-2"><MDBIcon far icon="lightbulb" /> Today</p>
-                                <p className="ml-1"><MDBIcon icon="sort" /> Sort</p>
+                                <p className="mr-2">
+                                    <MDBIcon far icon="lightbulb" /> 
+                                    Today
+                                </p>
+                                <p className="ml-1">
+                                    <MDBIcon icon="sort" />
+                                    Sort
+                                </p>
                             </MDBCol>
                         </MDBRow>
                     </MDBCol>{/* Title Area End */}
@@ -86,7 +92,13 @@ class Main extends Component {
                                     listId={this.props.activeList} 
                                     handleToggle={this.handleToggle} 
                                 />) : 
-                                (<p className="add-task" onClick={this.handleToggle}><MDBIcon icon="plus" /> Add Task</p>)
+                                (<p 
+                                    className="add-task" 
+                                    onClick={this.handleToggle}
+                                    >
+                                        <MDBIcon icon="plus" className="mr-2" /> 
+                                        Add Task
+                                </p>)
                         }
                     </MDBCol>
 
