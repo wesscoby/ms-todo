@@ -14,16 +14,14 @@ class TaskForm extends Component {
     handleChange = event => {
         let { type, name, value } = event.target
         if(type === "checkbox") value = event.target.checked;
-        this.setState({ [name]: value })
+        this.setState({ 
+            [name]: value 
+        })
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
         let { taskIdInput, listIdInput, titleInput, statusInput } = this.state;
-
-        // If handleChange is not called, use default values instead of value in state
-        if(listIdInput === '') listIdInput = this.props.listId;
-        if(titleInput === '') titleInput = this.props.taskTitle;
 
         // send form data to parent Component
         this.props.sendData({

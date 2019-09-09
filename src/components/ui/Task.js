@@ -11,7 +11,10 @@ class Task extends Component {
     // Toggle Task Form
     handleToggle = () => {
         // alert("Form closed")
-        this.setState({ taskFormToggle: !this.state.taskFormToggle })
+        this.setState(prevState => ({ 
+                taskFormToggle: !prevState.taskFormToggle 
+            })
+        );
     }
 
     // Icon to use if Task dependending on task status

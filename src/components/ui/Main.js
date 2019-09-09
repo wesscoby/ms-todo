@@ -11,7 +11,10 @@ class Main extends Component {
 
     // Toggle Task form 
     handleToggle = () => {
-        this.setState({ taskFormToggle: !this.state.taskFormToggle });
+        this.setState(prevState => ({ 
+                taskFormToggle: !prevState.taskFormToggle 
+            })
+        );
     }
 
 
