@@ -43,7 +43,7 @@ class Sidebar extends Component {
 
                 {/* Add or Update List Section */}
                 <div className="new-list d-flex flex-row justify-content-start">
-                    <p className="add-list blue-text mx-3 lead"><MDBIcon icon="plus" className="blue-text mr-2" />
+                    <p className="add-list blue-text mx-3"><MDBIcon icon="plus" className="blue-text mr-2" />
                         New List
                     </p>
                 </div>

@@ -31,11 +31,7 @@ class TaskForm extends Component {
             completed: statusInput
         });
 
-        this.handleToggleClick();
-    }
-
-    handleToggleClick = () => {
-        this.props.handleToggle();
+        this.props.handleToggle()
     }
 
     render() {
@@ -106,7 +102,7 @@ class TaskForm extends Component {
                         <MDBBtn 
                             color="outline-danger"
                             type="reset"
-                            onClick={this.handleToggleClick}
+                            onClick={() => this.props.handleToggle()}
                         >
                             <MDBIcon size="1x" icon="times" className=""/>
                         </MDBBtn>
