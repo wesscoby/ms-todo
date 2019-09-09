@@ -4,7 +4,21 @@ import List from './List';
 
 
 class Sidebar extends Component {
+
     render() {
+
+        const listComponents = this.props.lists.map(list => (
+            <List 
+                key={list.id} 
+                {...list}
+                activeList={(list.id === this.props.activeList) ? 'active' : ''}
+                changeActive={this.props.changeActive}
+                removeList={this.props.removeList}
+                updateList={this.props.updateList}
+                tasks={this.props.tasks}
+            />
+        ))
+
         return (
             // Sidebar
             <MDBCol md="3" className="d-none d-md-block sidebar">
@@ -21,17 +35,7 @@ class Sidebar extends Component {
 
                         {/* List Section */}
                         <div id="sidebar-list" className="sidebar-list">
-                            {this.props.lists.map(list => (
-                                <List 
-                                    key={list.id} 
-                                    {...list}
-                                    activeList={(list.id === this.props.activeList) ? 'active' : ''}
-                                    changeActive={this.props.changeActive}
-                                    removeList={this.props.removeList}
-                                    updateList={this.props.updateList}
-                                    tasks={this.props.tasks}
-                                />
-                            ))}
+                            {listComponents}
                         </div>
                     
                     </MDBNav>
@@ -39,7 +43,9 @@ class Sidebar extends Component {
 
                 {/* Add or Update List Section */}
                 <div className="new-list d-flex flex-row justify-content-start">
-                    <p className="add-list blue-text mx-3"><MDBIcon icon="plus" className="blue-text" /> New List</p>
+                    <p className="add-list blue-text mx-3 lead"><MDBIcon icon="plus" className="blue-text mr-2" />
+                        New List
+                    </p>
                 </div>
 
             </MDBCol> // Sidebar End
