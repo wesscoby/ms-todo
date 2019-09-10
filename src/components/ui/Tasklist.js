@@ -24,7 +24,7 @@ const Tasklist = ({ tasks, activeList, addTask, updateTask, removeTask }) => {
         <MDBCol id="task-list" className="task-list">
             <MDBRow className="d-flex flex-column">
                 {
-                    (activeList !== "5") ?
+                    (activeList !== "0B59aIXY") ?
                         activeTasks.map(renderTasks) :
                         tasks.map(renderTasks)
                 }

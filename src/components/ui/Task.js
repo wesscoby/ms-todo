@@ -58,6 +58,7 @@ class Task extends Component {
                                 color="primary" 
                                 className="px-3"
                                 value={this.props.id}
+                                title="Update"
                                 onClick={this.handleToggle}
                             >
                                 <MDBIcon far icon="edit" />
@@ -67,6 +68,7 @@ class Task extends Component {
                                 color="danger" 
                                 className="px-3"
                                 value={this.props.id}
+                                title="Delete"
                                 onClick={ () => this.props.removeTask(this.props.id) }
                             >
                                 <MDBIcon far icon="trash-alt"/>

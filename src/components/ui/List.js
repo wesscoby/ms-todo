@@ -7,11 +7,11 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
     // Remove list [ delete from store ]
     // Exception: Lists with ids 1 to 5 cannot be deleted
     const remove = () => {
-        const readOnlyLists = ["1", "2", "3", "4", "5"];
+        const readOnlyLists = ["hGmEf0u", "1svxVFWv", "SJ8e0pkh", "tv_cxout", "0B59aIXY"];
         if (readOnlyLists.includes(id)) {
             alert("This List is ReadOnly!");
         } else {
-            changeActive("1"); // Default to 'My Day'
+            changeActive("hGmEf0u"); // Default to 'My Day'
             removeList(id);
         }
     }
@@ -36,6 +36,7 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
                 <MDBIcon icon={icon} className={`${color} mr-2`}/>
                 {name}
             </button>
+            <button></button>
 
             <Fragment>
                 {/*
@@ -44,7 +45,7 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
                 */}
                 
                 {((display) => {
-                    if(id !== "5") {
+                    if(id !== "0B59aIXY") {
                         let filteredTasksLength = tasks.filter(task => task.listId === id).length
                         return display(filteredTasksLength)
                     } else {

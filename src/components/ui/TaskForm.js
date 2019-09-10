@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MDBFormInline, MDBInput, MDBIcon, MDBBtnGroup, MDBBtn } from "mdbreact";
+import shortId from 'shortid';
 
 class TaskForm extends Component {
 
@@ -25,7 +26,7 @@ class TaskForm extends Component {
 
         // send form data to parent Component
         this.props.sendData({
-            id: taskIdInput, 
+            id: taskIdInput || shortId.generate(), 
             listId: listIdInput, 
             title: titleInput, 
             completed: statusInput
@@ -42,37 +43,12 @@ class TaskForm extends Component {
                 <div className="flex-grow-1 flex-fill mr-5">
                     <MDBInput
                         className="w-100"
-                        label="Task Title" 
+                        label="Title" 
                         type="text"
                         value={this.state.titleInput}
                         name="titleInput" 
                         onInput={this.handleChange}
                     />
-                </div>
-
-                {/* ID field */}
-                <div className="flex-shrink-1">
-                    <MDBInput
-                        className="w-50"
-                        label="ID"
-                        type="text"
-                        name="taskIdInput"
-                        value={this.state.taskIdInput}
-                        onInput={this.handleChange}
-                    />
-                </div>
-
-                {/* List ID field */}
-                <div className="flex-shrink-1">
-                <MDBInput
-                    className="w-50" 
-                    label="List ID"
-                    disabled
-                    type="text" 
-                    name="listIdInput"
-                    value={this.state.listIdInput} 
-                    onInput={this.handleChange} 
-                />
                 </div>
 
                 {/* Status checkbox */}
@@ -90,10 +66,11 @@ class TaskForm extends Component {
                 
                 {/* Submit and Cancel buttons */}
                 <div className="flex-shrink-1">
-                    <MDBBtnGroup size="sm" className="w-50">
+                    <MDBBtnGroup size="sm" className="w-100">
                         <MDBBtn
                             color="outline-success"
                             type="submit"
+                            title="Submit"
                             onClick={this.handleSubmit}
                         >
                             <MDBIcon size="1x" icon="plus" className="" />
@@ -102,6 +79,7 @@ class TaskForm extends Component {
                         <MDBBtn 
                             color="outline-danger"
                             type="reset"
+                            title="Cancel"
                             onClick={() => this.props.handleToggle()}
                         >
                             <MDBIcon size="1x" icon="times" className=""/>
