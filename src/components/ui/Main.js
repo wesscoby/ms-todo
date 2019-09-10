@@ -39,7 +39,7 @@ class Main extends Component {
                         {
                             (this.state.taskFormToggle) ?
                                 (<TaskForm 
-                                    sendData={this.addNewTask} 
+                                    sendData={this.props.addTask} 
                                     listId={this.props.activeList} 
                                     handleToggle={this.handleToggle} 
                                 />) : 
