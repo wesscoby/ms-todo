@@ -54,7 +54,7 @@ class TaskForm extends Component {
                 {/* Status checkbox */}
                 <div className="flex-shrink-1 mr-5">
                     <MDBInput 
-                        label="Done" 
+                        label="Completed" 
                         className="w-50"
                         type="checkbox"
                         checked={this.state.statusInput}

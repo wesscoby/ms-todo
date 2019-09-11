@@ -20,11 +20,11 @@ const TitleArea = ({ name, icon, color }) => (
 
             <MDBCol className="d-flex flex-row justify-content-end">
                 <p className="mr-2">
-                    <MDBIcon far icon="lightbulb" /> 
+                    <MDBIcon far icon="lightbulb" className="mr-1"/> 
                     Today
                 </p>
                 <p className="ml-1">
-                    <MDBIcon icon="sort" />
+                    <MDBIcon icon="sort" className="mr-1"/>
                     Sort
                 </p>
             </MDBCol>

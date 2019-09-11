@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { MDBNavItem, MDBIcon } from 'mdbreact';
 
 
-const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeList }) => {
+const List = ({ tasks, icon, id, color, name, activeList, updateList, changeActive, removeList }) => {
 
     // Remove list [ delete from store ]
     // Exception: Lists with ids 1 to 5 cannot be deleted
@@ -36,7 +36,6 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
                 <MDBIcon icon={icon} className={`${color} mr-2`}/>
                 {name}
             </button>
-            <button></button>
 
             <Fragment>
                 {/*
