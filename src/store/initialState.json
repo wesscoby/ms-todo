@@ -1,73 +1,73 @@
 {
     "lists": [
         {
-            "id": "1",
+            "id": "hGmEf0u",
             "name": "My Day",
             "icon": "cloud-sun",
             "color": "normal"
         },
         {
-            "id": "2",
+            "id": "1svxVFWv",
             "name": "Important",
             "icon": "star",
             "color": "normal"
         },
         {
-            "id": "3",
+            "id": "SJ8e0pkh",
             "name": "Planned",
             "icon": "calendar-alt",
             "color": "normal"
         },
         {
-            "id": "4",
+            "id": "tv_cxout",
             "name": "Flagged Email",
             "icon": "flag",
             "color": "red-text"
         },
         {
-            "id": "5",
+            "id": "0B59aIXY",
             "name": "Tasks",
             "icon": "home",
             "color": "blue-text"
         },
         {
-            "id": "6",
+            "id": "-piribTT",
             "name": "Daily Routine",
             "icon": "list",
             "color": "blue-text"
         },
         {
-            "id": "7",
+            "id": "oPTz7cq_",
             "name": "Family",
             "icon": "users",
             "color": "normal"
         },
         {
-            "id": "8",
+            "id": "VwOYCjJU",
             "name": "Learn",
-            "icon": "list",
+            "icon": "chalkboard-teacher",
             "color": "green-text"
         },
         {
-            "id": "9",
+            "id": "SEjZ0uZE",
             "name": "Chores",
             "icon": "list",
             "color": "red-text"
         },
         {
-            "id": "10",
+            "id": "a1IBIneB",
             "name": "Wealth",
             "icon": "money-bill-alt",
             "color": "normal"
         },
         {
-            "id": "11",
+            "id": "wd_u7FH2",
             "name": "Spirit",
             "icon": "fire-alt",
             "color": "red-text"
         },
         {
-            "id": "12",
+            "id": "6x5BPdz1",
             "name": "Health",
             "icon": "hospital",
             "color": "normal"
@@ -75,131 +75,131 @@
     ],
     "tasks": [
         {
-            "id": "1",
-            "listId": "2",
+            "id": "GreCD5sj",
+            "listId": "1svxVFWv",
             "title": "Complete UI Build with all elements in their respective places",
             "completed": true
         },
         {
-            "id": "2",
-            "listId": "2",
+            "id": "sFLyRljE",
+            "listId": "1svxVFWv",
             "title": "Implement Redux. Add a store to the project",
             "completed": true
         },
         {
-            "id": "3",
-            "listId": "2",
+            "id": "zvlNWTzc",
+            "listId": "1svxVFWv",
             "title": "Add a new Task. Store all tasks in the Redux store",
             "completed": true
         },
         {
-            "id": "4",
-            "listId": "2",
+            "id": "N9yBOWbX",
+            "listId": "1svxVFWv",
             "title": "Edit a Task in the Redux store",
             "completed": true
         },
         {
-            "id": "5",
-            "listId": "2",
+            "id": "NztITXGeM",
+            "listId": "1svxVFWv",
             "title": "Delete a Task from the Redux store",
             "completed": true
         },
         {
-            "id": "6",
-            "listId": "2",
+            "id": "M3PJsiK4H",
+            "listId": "1svxVFWv",
             "title": "Obviously all Tasks should be visible in the UI as a list",
             "completed": true
         },
         {
-            "id": "7",
-            "listId": "1",
+            "id": "Yp1nAwH1l",
+            "listId": "hGmEf0u",
             "title": "Go to Software Design Meetup",
             "completed": true
         },
         {
-            "id": "8",
-            "listId": "1",
+            "id": "13GIj3a1r",
+            "listId": "hGmEf0u",
             "title": "Meet Alvin for final assessment",
             "completed": true
         },
         {
-            "id": "9",
-            "listId": "8",
+            "id": "ZiJfbe0nL",
+            "listId": "VwOYCjJU",
             "title": "Learn React Hooks and Context",
             "completed": false
         },
         {
-            "id": "10",
-            "listId": "3",
+            "id": "TsaaBiy_n",
+            "listId": "SJ8e0pkh",
             "title": "Click on a List in Sidebar to make it active",
             "completed": true
         },
         {
-            "id": "11",
-            "listId": "3",
+            "id": "_b2Nn2QuD",
+            "listId": "SJ8e0pkh",
             "title": "Display tasks in Main, related to selected List",
             "completed": true
         },
         {
-            "id": "12",
-            "listId": "3",
+            "id": "bHWVxR4xx",
+            "listId": "SJ8e0pkh",
             "title": "Add a toggle icon to Task to indicate status of Task (and toggle when clicked)",
             "completed": true
         },
         {
-            "id": "13",
-            "listId": "3",
+            "id": "V2w83PDmM",
+            "listId": "SJ8e0pkh",
             "title": "Add a counter to Lists. Counter for 'Tasks' shows the total number of tasks in store",
             "completed": true
         },
         {
-            "id": "14",
-            "listId": "3",
+            "id": "geCWIJT51",
+            "listId": "SJ8e0pkh",
             "title": "Add a toggle icon to Task to indicate status of Task (and toggle when clicked)",
             "completed": true
         },
         {
-            "id": "15",
-            "listId": "3",
+            "id": "apAOvAjXE",
+            "listId": "SJ8e0pkh",
             "title": "Double-click on a list to delete it from Store",
             "completed": true
         },
         {
-            "id": "16",
-            "listId": "3",
+            "id": "yybVK3gcO",
+            "listId": "SJ8e0pkh",
             "title": "Add a new List. Store all Lists in the store",
             "completed": false
         },
         {
-            "id": "17",
-            "listId": "3",
+            "id": "O9PeIFxJV",
+            "listId": "SJ8e0pkh",
             "title": "Edit a List in the Redux Store",
             "completed": false
         },
         {
-            "id": "18",
-            "listId": "3",
+            "id": "dLNzWg_ay",
+            "listId": "SJ8e0pkh",
             "title": "Autogenerate id when adding new List or Task",
             "completed": false
         },
         {
-            "id": "19",
-            "listId": "8",
+            "id": "AaG5RBPm_",
+            "listId": "VwOYCjJU",
             "title": "Learn and get started with Firebase",
             "completed": false
         },
         {
-            "id": "20",
-            "listId": "6",
+            "id": "KDyNJnKET",
+            "listId": "-piribTT",
             "title": "Eat. Sleep. Code. Repeat 😉",
             "completed": false
         },
         {
-            "id": "21",
-            "listId": "3",
+            "id": "Xhpy8sM9U",
+            "listId": "SJ8e0pkh",
             "title": "Add filter based on task status [ completed || !completed ]",
             "completed": false
         }
     ],
-    "activeList": "1"
+    "activeList": "hGmEf0u"
 }

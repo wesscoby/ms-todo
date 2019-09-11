@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBNav, MDBIcon } from 'mdbreact';
 import List from './List';
+import FormModal from './FormModal';
 
 
 class Sidebar extends Component {
 
+<<<<<<< HEAD
     render() {
 
         const listComponents = this.props.lists.map(list => (
+=======
+    state = {
+        modalToggle: false
+    }
+
+    handleToggle = () => {
+        this.setState(prevState => ({
+            modalToggle: !prevState.modalToggle
+        }))
+    }
+
+    render() {
+
+        const renderListComponents = this.props.lists.map(list => (
+>>>>>>> feature/adding-lists
             <List 
                 key={list.id} 
                 {...list}
@@ -17,7 +34,11 @@ class Sidebar extends Component {
                 updateList={this.props.updateList}
                 tasks={this.props.tasks}
             />
+<<<<<<< HEAD
         ))
+=======
+        ));
+>>>>>>> feature/adding-lists
 
         return (
             // Sidebar
@@ -35,17 +56,42 @@ class Sidebar extends Component {
 
                         {/* List Section */}
                         <div id="sidebar-list" className="sidebar-list">
+<<<<<<< HEAD
                             {listComponents}
+=======
+                            {renderListComponents}
+>>>>>>> feature/adding-lists
                         </div>
                     
                     </MDBNav>
                 </div>
 
-                {/* Add or Update List Section */}
+                {/* Add List Section */}
                 <div className="new-list d-flex flex-row justify-content-start">
+<<<<<<< HEAD
                     <p className="add-list blue-text mx-3 lead"><MDBIcon icon="plus" className="blue-text mr-2" />
                         New List
                     </p>
+=======
+                    {(this.state.modalToggle) ? 
+                        (
+                            <FormModal
+                                submitData={this.props.addList}
+                                modalTitle="Add New List"
+                                handleToggle={this.handleToggle}
+                            />
+                        ) :
+                        (
+                            <p
+                                onClick={this.handleToggle}
+                                className="add-list blue-text mx-3"
+                            >
+                                <MDBIcon icon="plus" className="blue-text mr-2" />
+                                New List
+                            </p>
+                        )
+                    }
+>>>>>>> feature/adding-lists
                 </div>
 
             </MDBCol> // Sidebar End

@@ -8,10 +8,12 @@ import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
+import shortId from 'shortid';
 // import actions from './store/actions'
 
 // window.store = store;
 // window.actions = actions
+window.short = shortId;
 
 render(
     <Provider store={store}>

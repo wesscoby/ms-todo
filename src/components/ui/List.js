@@ -2,24 +2,17 @@ import React, { Fragment } from 'react';
 import { MDBNavItem, MDBIcon } from 'mdbreact';
 
 
-const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeList }) => {
-
-    // When a List is selected
-    const makeActive = event => {
-        const { value } = event.target;
-        changeActive(value);
-    }
+const List = ({ tasks, icon, id, color, name, activeList, updateList, changeActive, removeList }) => {
 
     // Remove list [ delete from store ]
     // Exception: Lists with ids 1 to 5 cannot be deleted
-    const remove = event => {
-        const readOnlyLists = ["1", "2", "3", "4", "5"];
-        const { value } = event.target;
-        if (readOnlyLists.includes(value)) {
+    const remove = () => {
+        const readOnlyLists = ["hGmEf0u", "1svxVFWv", "SJ8e0pkh", "tv_cxout", "0B59aIXY"];
+        if (readOnlyLists.includes(id)) {
             alert("This List is ReadOnly!");
         } else {
-            changeActive("1"); // Default to 'My Day'
-            removeList(value);
+            changeActive("hGmEf0u"); // Default to 'My Day'
+            removeList(id);
         }
     }
 
@@ -35,7 +28,7 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
             */}
             <button 
                 value={id}
-                onClick={makeActive} 
+                onClick={() => changeActive(id)} 
                 onDoubleClick={remove}
                 className="btn btn-link p-2"
                 title="DoubleClick to Delete"
@@ -51,7 +44,7 @@ const List = ({ tasks, icon, id, color, name, activeList, changeActive, removeLi
                 */}
                 
                 {((display) => {
-                    if(id !== "5") {
+                    if(id !== "0B59aIXY") {
                         let filteredTasksLength = tasks.filter(task => task.listId === id).length
                         return display(filteredTasksLength)
                     } else {
