@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
     MDBInput, MDBModalBody, 
-    MDBBtn, MDBModal, MDBModalHeader, MDBModalFooter 
+    MDBBtn, MDBModal, MDBModalHeader 
 } from 'mdbreact';
 import shortId from 'shortid';
 

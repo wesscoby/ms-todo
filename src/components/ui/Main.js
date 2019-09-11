@@ -28,39 +28,11 @@ class Main extends Component {
                 <MDBRow className="d-flex flex-column justify-content-between">
                     
                     {/* Title Area */}
-<<<<<<< HEAD
-                    <MDBCol>
-                        <MDBRow className="d-flex flex-row justify-content-between title-area">
-                            <MDBCol className="d-flex flex-column mb-2">
-                                <h4>
-                                    <MDBIcon 
-                                        icon={icon} 
-                                        className={`${(color === 'normal') ? 'black-text' : color} mr-2`}
-                                    />
-                                    {name}
-                                    <span id="elipsis" className="mx-3">...</span>
-                                </h4>
-                                <p id="date">Thursday, August 29</p>
-                            </MDBCol>
-                            <MDBCol className="d-flex flex-row justify-content-end">
-                                <p className="mr-2">
-                                    <MDBIcon far icon="lightbulb" /> 
-                                    Today
-                                </p>
-                                <p className="ml-1">
-                                    <MDBIcon icon="sort" />
-                                    Sort
-                                </p>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBCol>{/* Title Area End */}
-=======
                     <TitleArea 
                         name={name}
                         icon={icon}
                         color={color}
                     />
->>>>>>> feature/adding-lists
 
                     {/* Toggle between 'Add Task' form and button  */}
                     <MDBCol className="mb-3 form-toggle-section lead">
